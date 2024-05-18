@@ -1,0 +1,242 @@
+{% extends 'master.html' %}
+{% block content %}
+    <header class="mb-3">
+        <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+        </a>
+    </header>
+
+    <div class="page-heading">
+        <h3>Profile Statistics</h3>
+    </div>
+    <div class="page-content">
+        <section class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-purple">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon purple mb-2">
+                                        <i class="iconly-boldShow"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Profile Views</h6>
+                                    <h6 class="font-extrabold mb-0">112.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon blue mb-2">
+                                        <i class="iconly-boldProfile"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Followers</h6>
+                                    <h6 class="font-extrabold mb-0">183.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon green mb-2">
+                                        <i class="iconly-boldAdd-User"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Following</h6>
+                                    <h6 class="font-extrabold mb-0">80.000</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body px-4 py-4-5">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
+                                    <div class="stats-icon red mb-2">
+                                        <i class="iconly-boldBookmark"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                                    <h6 class="text-muted font-semibold">Saved Post</h6>
+                                    <h6 class="font-extrabold mb-0">112</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="row">
+            <div class="col">
+                <div class="card widget-todo">
+                    <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                        <h4 class="card-title d-flex">
+                            <i class="bx bx-check font-medium-5 pl-25 pr-75"></i>Tasks
+                        </h4>
+                        <ul class="list-inline d-flex mb-0">
+                            <li class="d-flex align-items-center">
+                                <i class="bx bx-check-circle font-medium-3 me-50"></i>
+                                <div class="dropdown">
+                                    <div class="dropdown-toggle me-1" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Task
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bx bx-sort me-50 font-medium-3"></i>
+                                <div class="dropdown">
+                                    <div class="dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Task
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body px-0 py-1 overflow-auto">
+                        <ul class="widget-todo-list-wrapper" id="widget-todo-list">
+                            <li class="widget-todo-item">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-1">
+                                        </div>
+                                        <label for="checkbox-1" class="widget-todo-title ms-2">Add SCSS and JS files if
+                                            required</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-success me-1">frontend</div>
+                                        <div class="avatar bg-warning">
+                                            <img src="/static/assets/compiled/jpg/1.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="widget-todo-item">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-2">
+                                        </div>
+                                        <label for="checkbox-2" class="widget-todo-title ms-2">Check all the changes that you did,
+                                            before you commit</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-danger me-1">backend</div>
+                                        <div class="avatar bg-warning">
+                                            <img src="/static/assets/compiled/jpg/2.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="widget-todo-item completed">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-3" checked="">
+                                        </div>
+                                        <label for="checkbox-3" class="widget-todo-title ms-2">Dribble, Behance, UpLabs &amp; Pinterest
+                                            Post</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-primary me-1">UI/UX</div>
+                                        <div class="avatar bg-rgba-primary m-0 me-50">
+                                            <img src="/static/assets/compiled/jpg/3.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="widget-todo-item">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-4">
+                                        </div>
+                                        <label for="checkbox-4" class="widget-todo-title ms-2">Fresh Design Web &amp; Responsive
+                                            Miracle</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-info me-1">Design</div>
+                                        <div class="avatar bg-warning">
+                                            <img src="/static/assets/compiled/jpg/4.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="widget-todo-item">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-5">
+                                        </div>
+                                        <label for="checkbox-5" class="widget-todo-title ms-2">Add Calendar page and source and
+                                            credit page in
+                                            documentation</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-warning me-1">Javascript</div>
+                                        <div class="avatar bg-warning">
+                                            <img src="/static/assets/compiled/jpg/5.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="widget-todo-item">
+                                <div class="widget-todo-title-wrapper d-flex justify-content-between align-items-center mb-50">
+                                    <div class="widget-todo-title-area d-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list cursor-move"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        <div class="checkbox checkbox-shadow">
+                                            <input type="checkbox" class="form-check-input" id="checkbox-6">
+                                        </div>
+                                        <label for="checkbox-6" class="widget-todo-title ms-2">Add Angular Starter-kit</label>
+                                    </div>
+                                    <div class="widget-todo-item-action d-flex align-items-center">
+                                        <div class="badge badge-pill bg-light-primary me-1">UI/UX</div>
+                                        <div class="avatar bg-warning">
+                                            <img src="/static/assets/compiled/jpg/1.jpg" alt="" srcset="">
+                                        </div>
+                                        <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+<div class="page-title">
+    <div class="row mb-4">
+        <div class="col-12 col-md-6 order-md-1 order-last">
+            <h3>User Page</h3>
+        </div>
+        <div class="col-12 col-md-6 order-md-2 order-first">
+            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                <a>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="form-group">
+
+                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#inlineForm">
+                                    Add User
+                                </button>
+
+                                <!--login form Modal -->
+                                <div class="modal fade text-left" id="inlineForm" tabindex="-1" aria-labelledby="myModalLabel33" style="display: none;" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel33">Create User Form </h4>
+                                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                                </button>
+                                            </div>
+                                            <form method="post" action="{{ url_for('add_user') }}"  enctype="multipart/form-data">
+                                                <div class="modal-body">
+                                                    <label for="email">User Name </label>
+                                                    <div class="form-group">
+                                                        <input id="name" type="text" placeholder="Username" name="username" class="form-control">
+                                                    </div>
+                                                    <label for="email">Email: </label>
+                                                    <div class="form-group">
+                                                        <input id="email" type="email" placeholder="Email Address" name="email" class="form-control">
+                                                    </div>
+                                                    <label for="password">Gender </label>
+                                                    <div class="form-group">
+                                                        <fieldset class="form-group">
+                                                            <select class="form-select" id="basicSelect" name="gender">
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                            </select>
+                                                        </fieldset>
+                                                    </div>
+                                                    <label for="email">Phone </label>
+                                                    <div class="form-group">
+                                                        <input id="email" type="number" placeholder="Phone Number" name="phone" class="form-control">
+                                                    </div>
+                                                    <label for="email">Address </label>
+                                                    <div class="form-group">
+                                                        <input id="email" type="text" placeholder="Address" name="address" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                                        <i class="bx bx-x d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">Close</span>
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary float-right">Save</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </nav>
+        </div>
+    </div>
+</div>

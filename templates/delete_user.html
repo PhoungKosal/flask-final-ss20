@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <div class="content-header">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="text-danger">Do you want to delete?</h3>
+                                <ul>
+                                    <li>Name: {{ data[1] }}</li>
+                                    <li>Gender: {{ data[2] }}</li>
+                                    <li>Phone: {{ data[3] }}</li>
+                                    <li>Email: {{ data[4] }}</li>
+                                    <li>Address: {{ data[5] }}</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <form method="POST" action="{{ url_for('delete_user', id=data[0]) }}">
+                                    <a href="{{ url_for('user') }}">
+                                        <button type="button" class="btn btn-warning float-left">Cancel</button>
+                                    </a>
+                                    <input type="submit" class="btn btn-danger float-right" value="Yes, Delete!">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

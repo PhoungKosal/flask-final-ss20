@@ -1,0 +1,57 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <div class="content-header">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="post" action="{{ url_for('edit_user') }}" enctype="multipart/form-data">
+                                    <div class="modal-body">
+                                        <label for="email">User Name </label>
+                                        <div class="form-group">
+                                            <input type="hidden" name="id" value="{{ data[0] }}">
+                                            <input id="name" type="text" placeholder="Username" name="username"
+                                                   class="form-control" value="{{ data[1] }}">
+                                        </div>
+                                        <label for="email">Email: </label>
+                                        <div class="form-group">
+                                            <input id="email" type="email" placeholder="Email Address" name="email"
+                                                   class="form-control" value="{{ data[2] }}">
+                                        </div>
+                                        <label for="password">Gender </label>
+                                        <div class="form-group">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect" name="gender">
+                                                    {% for option in ['Male', 'Female'] %}
+                                                        <option {% if data[3]|lower == option|lower %}
+                                                            selected {% endif %}>{{ option }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <label for="email">Phone </label>
+                                        <div class="form-group">
+                                            <input id="email" type="number" placeholder="Phone Number" name="phone"
+                                                   class="form-control" value="{{ data[4] }}">
+                                        </div>
+                                        <label for="email">Address </label>
+                                        <div class="form-group">
+                                            <input id="email" type="text" placeholder="Address" name="address"
+                                                   class="form-control" value="{{ data[5] }}">
+                                        </div>
+                                    </div>
+                                    <a href="{{ url_for('user') }}" class="btn btn-warning">Cancel</a>
+                                    <button type="submit" class="btn btn-primary float-right">Update</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

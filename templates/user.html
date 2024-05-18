@@ -1,0 +1,62 @@
+{% extends 'master.html' %}
+{% block content %}
+    <div class="page-heading">
+        {% include 'add_user.html' %}
+        <section class="section">
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover mb-0">
+                        <thead>
+                        <tr>
+                            <th>NO.</th>
+                            <th>USERNAME</th>
+                            <th>EMAIL</th>
+                            <th>GENDER</th>
+                            <th>PHONE</th>
+                            <th>ADDRESS</th>
+                            <th>ACTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for item in data %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ item['name'] }}</td>
+                                <td>{{ item['gender'] }}</td>
+                                <td>{{ item['phone'] }}</td>
+                                <td>{{ item['email'] }}</td>
+                                <td>{{ item['address'] }}</td>
+                                <td>
+                                    <a href="/view_user?id={{ item['id'] }}">
+                                        <button class="btn btn-sm btn-secondary">
+                                            <i class="fas fa-eye"></i>
+                                            View
+                                        </button>
+
+                                    </a>
+
+                                    <a href="/edit_user?id={{ item['id'] }}">
+                                        <button class="btn btn-sm btn-success">
+                                            <i class="fas fa-edit"></i>
+                                            Edit
+                                        </button>
+
+                                    </a>
+
+                                    <a href="/delete?id={{ item['id'] }}">
+                                        <button class="btn btn-sm btn-danger rounded-sm">
+                                            <i class="fas fa-trash"></i>
+                                            delete
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
